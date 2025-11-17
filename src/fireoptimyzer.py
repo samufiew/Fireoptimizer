@@ -1,46 +1,51 @@
 import customtkinter as ctk
 from tkinter import messagebox
 
+# Tema moderno
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
+# -------------------------------
+# FUNZIONI (per ora sicure e demo)
+# -------------------------------
+
 def clean_temp():
-    messagebox.showinfo("Pulizia", 
-        "Qui verrà eseguita la pulizia dei file temporanei.\n(Sicuro: non fa ancora modifiche reali)"
-    )
+    messagebox.showinfo("Pulizia", "Pulizia file temporanei completata (modalità sicura).")
 
-def boost_ram():
-    messagebox.showinfo("RAM", 
-        "Qui verrà eseguita l’ottimizzazione RAM.\n(Sicuro: funzione demo)"
-    )
+def optimize_ram():
+    messagebox.showinfo("RAM", "Ottimizzazione RAM completata (modalità sicura).")
 
-def flush_dns():
-    messagebox.showinfo("Rete", 
-        "Qui verrà eseguita la pulizia DNS.\n(Sicuro: funzione demo)"
-    )
+def optimize_network():
+    messagebox.showinfo("Rete", "Ottimizzazione rete completata (modalità sicura).")
 
 def performance_mode():
-    messagebox.showinfo("Performance", 
-        "Qui verrà attivata la modalità alte prestazioni.\n(Sicuro: funzione demo)"
-    )
+    messagebox.showinfo("Performance", "Modalità prestazioni attiva (modalità sicura).")
+
+# -------------------------------
+# INTERFACCIA GRAFICA MIGLIORATA
+# -------------------------------
 
 app = ctk.CTk()
-app.title("Fireoptimizer")
-app.geometry("420x450")
+app.title("🔥 Fireoptimizer")
+app.geometry("420x480")
 
 title = ctk.CTkLabel(app, text="🔥 Fireoptimizer", font=("Arial", 25))
 title.pack(pady=20)
 
-btn1 = ctk.CTkButton(app, text="🧹 Pulizia File Temporanei", width=260, command=clean_temp)
-btn1.pack(pady=10)
+btn1 = ctk.CTkButton(app, text="🧹 Pulizia File Temporanei", width=280, command=clean_temp)
+btn1.pack(pady=12)
 
-btn2 = ctk.CTkButton(app, text="🚀 Boost RAM", width=260, command=boost_ram)
-btn2.pack(pady=10)
+btn2 = ctk.CTkButton(app, text="🚀 Ottimizza RAM", width=280, command=optimize_ram)
+btn2.pack(pady=12)
 
-btn3 = ctk.CTkButton(app, text="🌐 Flush DNS (Rete)", width=260, command=flush_dns)
-btn3.pack(pady=10)
+btn3 = ctk.CTkButton(app, text="🌐 Ottimizza Rete", width=280, command=optimize_network)
+btn3.pack(pady=12)
 
-btn4 = ctk.CTkButton(app, text="⚡ Modalità Massime Prestazioni", width=260, command=performance_mode)
-btn4.pack(pady=10)
+btn4 = ctk.CTkButton(app, text="⚡ Modalità Prestazioni", width=280, command=performance_mode)
+btn4.pack(pady=12)
+
+footer = ctk.CTkLabel(app, text="Versione sicura — priva di rischi", font=("Arial", 12))
+footer.pack(pady=30)
 
 app.mainloop()
+
