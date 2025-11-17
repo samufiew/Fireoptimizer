@@ -1,0 +1,13 @@
+## Ignore Visual Studio temporary files, build results, and more.
+
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+*.cache
+*.pdb
+*.tmp
+*.log
+*.vspscc
+TestResults/.
