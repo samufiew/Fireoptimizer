@@ -1,26 +1,28 @@
 import customtkinter as ctk
-import tkinter as tk
 from tkinter import messagebox
-import os
 
 ctk.set_appearance_mode("dark")
 ctk.set_default_color_theme("blue")
 
 def clean_temp():
-    os.system("del /q/f/s %TEMP%\\*")
-    messagebox.showinfo("Pulizia", "File temporanei rimossi!")
+    messagebox.showinfo("Pulizia", 
+        "Qui verrà eseguita la pulizia dei file temporanei.\n(Sicuro: non fa ancora modifiche reali)"
+    )
 
 def boost_ram():
-    os.system("wmic process where name!='explorer.exe' call setpriority 128")
-    messagebox.showinfo("RAM", "RAM ottimizzata!")
+    messagebox.showinfo("RAM", 
+        "Qui verrà eseguita l’ottimizzazione RAM.\n(Sicuro: funzione demo)"
+    )
 
 def flush_dns():
-    os.system("ipconfig /flushdns")
-    messagebox.showinfo("Rete", "DNS pulito!")
+    messagebox.showinfo("Rete", 
+        "Qui verrà eseguita la pulizia DNS.\n(Sicuro: funzione demo)"
+    )
 
 def performance_mode():
-    os.system("powercfg -setactive SCHEME_MIN")
-    messagebox.showinfo("Performance", "Modalità prestazioni massime attivata!")
+    messagebox.showinfo("Performance", 
+        "Qui verrà attivata la modalità alte prestazioni.\n(Sicuro: funzione demo)"
+    )
 
 app = ctk.CTk()
 app.title("Fireoptimizer")
@@ -42,4 +44,3 @@ btn4 = ctk.CTkButton(app, text="⚡ Modalità Massime Prestazioni", width=260, c
 btn4.pack(pady=10)
 
 app.mainloop()
-
