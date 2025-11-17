@@ -1,3 +1,3 @@
-customtkinter==6.4
+PyQt6==6.6.0
 psutil==5.9.5
-pywin32==305
+
